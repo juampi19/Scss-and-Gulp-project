@@ -1,0 +1,69 @@
+@use '../base/mixins' as m;
+@use '../base/variables' as v;
+
+.boletos{
+    padding: 4rem 0;
+
+    h3{
+        text-align: center;
+        color: v.$blanco;
+    }
+
+    .boletos-content{
+        @include m.tablet {
+            @include m.grid(2, 4rem);
+        }
+    }
+}
+
+.boleto{
+    .pase{
+        text-align: center;
+        color: v.$blanco;
+        font-size: 2.8rem;
+    }
+
+    &-header,
+    &-footer{
+        padding: 1rem 0; 
+        p{
+            margin: 0;
+            text-align: center;
+            text-transform: uppercase;
+            color: v.$blanco;
+        }
+    }
+
+
+    &-header{
+        background-color: v.$rosa;
+        
+    }
+
+    &-body{
+        background-color: v.$blanco;
+        ul{
+            @include m.resetList;
+        }
+
+        li{
+            padding: 1rem 0;
+            border: 1px #e1e1e1 solid;
+        }
+    }
+
+    &-footer{
+        background-color: v.$morada;
+        p{
+            font-weight: 700;
+            font-size: 2.4rem;
+        }
+
+    }
+}
+
+
+
+.bg-boletos{
+    background-color: v.$verde;
+}

@@ -1,0 +1,79 @@
+@use '../base/mixins' as m;
+@use '../base/variables' as v;
+
+.lineup{
+    background-color: v.$rosa;
+    padding: 5rem 0;
+
+    h3,
+    p{
+        text-align: center;
+        color: v.$blanco;
+    }
+
+    .dia{
+        margin: 5rem 0;
+        text-transform: uppercase;
+    }
+
+}
+
+.escenario-content{
+
+    @include m.tablet {
+        @include m.grid(2, 5rem);
+    }
+
+    .escenario{
+        padding-top: 2.5rem;
+    }
+
+    .nombre-escenario{
+        color: v.$negro;
+    }
+}
+
+.escenario__icon{
+    width: 20rem;
+    height: 10rem;
+    margin: 2rem auto 0 auto;
+    
+}
+
+.rock{
+    background: url(/build/img/icono_rock.png) no-repeat center center;
+    background-size: 15rem;
+}
+
+.emd{
+    background: url(/build/img/icono_edm.png) no-repeat center center;
+    background-size: 15rem;
+}
+
+
+.calendario {
+    @include m.resetList;
+    margin-top: 2rem;
+
+    li{
+        padding: 2.5rem;
+        font-weight: 700;
+    }
+    span{
+        font-weight: 400;
+    }
+}
+
+.bg-amarillo{
+    background-color: v.$amarillo;
+
+    li:nth-child(odd){
+        background-color: darken(v.$amarillo, 10%);
+    }
+}
+.bg-verde{
+    background-color: v.$verde;
+    li:nth-child(odd){
+        background-color: darken(v.$verde, 10%);
+    }
+}
