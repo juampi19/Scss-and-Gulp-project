@@ -1,5 +1,5 @@
 # Proyecto con gulp y scss
-Este proyecto esta construido con gulp y scss.
+Proyecto construido con gulp y scss.
 
 
 ### Notas:
